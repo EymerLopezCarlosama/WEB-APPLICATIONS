@@ -1,0 +1,204 @@
+:root {
+    --fondo-principal: #131313;
+    --fondo-secundario: #2b2b2b;
+    --texto-secundario: #86868b;
+    --color-principal: #1561f0;
+    --color-hover: #0d48b8;
+    --texto-principal: #ffffff;
+
+    --fuente-titulo: "Bebas Neue", sans-serif;
+    --fuente-mono: "JetBrains Mono", monospace;
+    --fuente-texto: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--texto-principal);
+    background-color: var(--fondo-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+a { color: inherit; }
+
+#portafolio {
+    background-color: var(--fondo-principal);
+    width: 100%;
+    max-width: 640px;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--color-principal);
+    box-shadow: 0 0 12px var(--color-principal);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+
+.etiqueta-superior {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+}
+
+.punto {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-principal);
+    margin-right: 6px;
+}
+
+header h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 44px;
+    font-weight: normal;
+}
+
+.rol {
+    font-family: var(--fuente-mono);
+    font-size: 13px;
+    color: var(--color-principal);
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#foto img {
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+}
+
+#descripcion p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#estadisticas {
+    display: flex;
+    background-color: var(--fondo-secundario);
+    border-radius: 6px;
+    border: 1px solid var(--color-principal);
+    box-shadow: 0 0 8px var(--color-principal);
+    font-family: var(--fuente-mono);
+}
+
+#estadisticas > div {
+    flex: 1;
+    text-align: center;
+    padding: 12px 5px;
+}
+
+#estadisticas > div:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.valor {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.etiqueta {
+    font-size: 11px;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+}
+
+#proyectos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#proyectos h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cuadricula-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+#proyectos article {
+    background-color: var(--fondo-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+#proyectos article:hover {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 8px var(--color-principal);
+}
+
+.id-proyecto {
+    font-family: var(--fuente-mono);
+    font-size: 10px;
+    color: var(--color-principal);
+}
+
+.miniatura {
+    width: 100%;
+    height: 70px;
+    background-color: var(--fondo-principal);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.miniatura img {
+    display: none;
+}
+
+#proyectos article h3 { font-size: 14px; }
+
+#proyectos article p {
+    font-size: 12px;
+    color: var(--texto-secundario);
+}
+
+.enlace-proyecto {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    color: var(--color-principal);
+    text-decoration: none;
+    margin-top: auto;
+    transition: color 0.2s ease;
+}
+
+.enlace-proyecto:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+}
+
