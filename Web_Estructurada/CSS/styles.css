@@ -1,208 +1,326 @@
 :root {
-    --fondo-principal: #131313;
-    --fondo-secundario: #2b2b2b;
-    --texto-secundario: #86868b;
-    --color-principal: #1561f0;
-    --color-hover: #0d48b8;
-    --texto-principal: #ffffff;
+	--fondo-principal: #131313;
+	--fondo-secundario: #2b2b2b;
+	--texto-secundario: #86868b;
+	--color-principal: #1561f0;
+	--color-hover: #0d48b8;
+	--texto-principal: #ffffff;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
+	box-sizing: border-box;
 }
 
-*{
-    margin: 0px;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 1px;
+* {
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h1, h2, h3 {
+	font-family: "Black Ops One", sans-serif;
 }
 
 body {
-    line-height: 1.6;
-    color: var(--texto-principal);
-    background-color: var(--fondo-principal);
-    font-size: 16px;
+	line-height: 1.6;
+	color: var(--texto-principal);
+	background-color: var(--fondo-principal);
+	font-size: 16px;
+	background-image: linear-gradient(to top, var(--fondo-principal), var(--fondo-secundario));
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 header h1 {
-    font-family: "Black Ops One", sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--texto-principal);
-    text-transform: uppercase;
-    letter-spacing: 5px;
+	font-weight: bold;
+	color: var(--texto-principal);
+	text-transform: uppercase;
+	letter-spacing: 5px;
 }
 
 header span {
-    font-size: 15px;
-    font-weight: bold;
-    color: var(--texto-secundario);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--texto-secundario);
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 nav {
-    background-color: var(--fondo-secundario);
-    width: auto;
-    margin: 0 10px;
-    padding: 2px;
-    border-radius: 5px;
+	background-color: var(--fondo-secundario);
+	width: auto;
+	margin: 0 10px;
+	padding: 2px;
+	border-radius: 5px;
+	border: 2px solid white;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 nav li {
-    flex: 1;
+	flex: 1;
 }
 
 nav a {
-    display: block;
-    padding: 8px 14px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    color: var(--texto-principal);
+	display: block;
+	padding: 8px 14px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	color: var(--texto-principal);
 }
 
 nav a:hover {
-    background-color: var(--color-hover);
-    color: var(--texto-principal);
+	background-color: var(--color-hover);
+	color: var(--texto-principal);
+	border-radius: 4px;
+}
+
+nav a:focus-visible {
+	outline: 3px solid var(--texto-principal);
+	outline-offset: -3px;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--fondo-secundario);
-    color: var(--texto-principal);
-    border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+	margin: 10px;
+	background-color: var(--fondo-secundario);
+	color: var(--texto-principal);
+	border-radius: 5px;
+	border: 2px solid white;
 }
 
 #contenido {
-    position: relative;
-    overflow: hidden;
-    min-height: 200px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/TEC.avif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+	min-height: 200px;
 }
 
 #contenido a {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--color-principal);
-    color: var(--texto-principal);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: "Bebas Neue", sans-serif;
-    transition: background-color 0.2s;
+	margin-top: 10px;
+	display: inline-block;
+	text-decoration: none;
+	background-color: var(--color-principal);
+	color: var(--texto-principal);
+	padding: 20px 30px;
+	font-size: clamp(18px, 2vw, 20px);
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.2s ease;
+	border: 2px solid white;
+	width: auto;
+	text-align: center;
 }
 
 #contenido a:hover {
-    background-color: var(--color-hover);
+	background-color: var(--color-hover);
 }
 
-#contenido h2 {
-    font-family: "Black Ops One", sans-serif;
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--texto-principal);
+#contenido a:focus-visible {
+	outline: 3px solid var(--texto-principal);
+	outline-offset: 3px;
+}
+
+#contenido h2{
+	margin-bottom: 10px;
+	color: var(--texto-principal);
 }
 
 #contenido p {
-    font-weight: bold;
-    color: var(--texto-principal);
+	font-weight: bold;
+	color: var(--texto-principal);
 }
 
-#contenido img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-    z-index: 0;
-}
-
-#contenido > *:not(img) {
-    position: relative;
-    z-index: 1;
+#contenido div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transform: translateX(-5px);
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
+	margin: 20px;
 }
 
 main h2 {
-    font-family: "Black Ops One", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 main > section {
-    flex: 0 1 30%;
-    width: 30%;
+	flex: 1 1 calc(33.333% - 40px);
+	width: auto;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 form button {
-    background-color: var(--color-principal);
-    color: var(--texto-principal);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: "Bebas Neue", sans-serif;
-    transition: background-color 0.2s;
+	background-color: var(--color-principal);
+	color: var(--texto-principal);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.2s;
 }
 
 form button:hover {
-    background-color: var(--color-hover);
-    color: var(--texto-principal);
+	background-color: var(--color-hover);
+	color: var(--texto-principal);
+}
+
+form button:focus-visible {
+	outline: 3px solid var(--texto-principal);
+	outline-offset: 3px;
 }
 
 footer {
-    background-color: var(--fondo-secundario);
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bold;
+	background-color: var(--fondo-secundario);
+	text-align: center;
+	padding: 10px;
+	font-size: 14px;
+	font-weight: bold;
 }
 
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		padding: 10px;
+	}
+
+	header h1 {
+		text-align: center;
+	}
+
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav li,
+	nav a {
+		width: 100%;
+	}
+
+	nav a {
+		font-size: 18px;
+	}
+
+	main {
+		gap: 10px;
+	}
+
+	main > section {
+		flex: 1 1 100%;
+		width: auto;
+		margin: 5px 0;
+	}
+
+	section {
+		margin: 5px;
+		padding: 15px;
+	}
+
+	#contenido {
+		min-height: 180px;
+	}
+
+		#contenido a {
+			width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	header h1 {
+		letter-spacing: 3px;
+	}
+
+	header span {
+		font-size: 13px;
+	}
+
+	nav {
+		margin: 0 5px;
+		width: calc(100% - 10px);
+	}
+
+	nav a {
+		padding: 8px;
+		font-size: 16px;
+	}
+
+	section {
+		padding: 10px;
+	}
+
+	#contenido {
+		min-height: 160px;
+	}
+
+	form {
+		gap: 12px;
+	}
+
+	footer {
+		font-size: 12px;
+	}
+}
