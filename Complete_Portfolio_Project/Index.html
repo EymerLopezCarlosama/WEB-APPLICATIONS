@@ -1,418 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="Portafolios de Eymer y Yined Paola, estudiantes de Ingeniería de Sistemas enfocados en IA, desarrollo y ciberseguridad."
-		/>
-		<title>Portafolios — Eymer & Yined Paola</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
-			rel="stylesheet"
-		/>
-        <link rel="preload" href="css/normalize.css" as="style" />
-		<link rel="stylesheet" href="css/normalize.css" />
-        <link rel="preload" href="css/style.css" as="style" />
-		<link rel="stylesheet" href="css/style.css" />
-	</head>
-	<body>
-		<!-- BARRA SUPERIOR DE CONMUTACIÓN (SWITCHER) -->
-		<header class="encabezado">
-			<div class="contenedor navbar">
-				<p class="logo">~/<span>portafolios</span></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional — Eymer & Yined Paola</title>
+    <meta name="description" content="Portafolio profesional de Eymer López y Yined Paola, estudiantes de Ingeniería de Sistemas enfocados en desarrollo, IA y ciberseguridad.">
+    
+    <!-- FUENTES EXTERNAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- HOJAS DE ESTILO EXTERNAS -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-				<!-- Botones/Controladores listos para enganchar con JS -->
-				<div class="selector-portafolio">
-					<button type="button" class="btn-switch activo" id="btn-eymer">
-						Eymer
-					</button>
-					<button type="button" class="btn-switch" id="btn-yined">
-						Yined Paola
-					</button>
-				</div>
-			</div>
-		</header>
+    <!-- HEADER Y NAV GENERAL -->
+    <header id="encabezado-principal">
+        <nav class="selector-portafolios" aria-label="Navegación entre integrantes">
+            <button type="button" class="btn-tab activo" id="tab-eymer">Portafolio: Eymer López</button>
+            <button type="button" class="btn-tab" id="tab-yined">Portafolio: Yined Paola</button>
+        </nav>
+    </header>
 
-		<!-- ================================================================= -->
-		<!-- PORTAFOLIO 1: EYMER -->
-		<!-- ================================================================= -->
-		<main id="portafolio-eymer" class="vista-portafolio">
-			<!-- HERO EYMER -->
-			<section class="hero" id="inicio-eymer">
-				<div class="contenedor hero-grid">
-					<p class="hero-etiqueta">systems engineering · AI · automation</p>
-					<h1>Eymer, desarrollador enfocado en seguridad e IA aplicada.</h1>
-					<p class="hero-descripcion">
-						Estudiante de Ingeniería de Sistemas en Unicomfacauca (Popayán,
-						Colombia). Construyo asistentes con IA, automatizaciones y
-						herramientas de análisis, mientras profundizo en redes, buenas
-						prácticas de seguridad y hacking ético.
-					</p>
+    <!-- ============================================== -->
+    <!-- PORTAFOLIO 1: EYMER LÓPEZ                     -->
+    <!-- ============================================== -->
+    <main id="portafolio-eymer" class="tarjeta-portafolio">
 
-					<div id="consola-hero-eymer" class="consola-box">
-						<div class="consola-barra">
-							<span class="consola-punto"></span>
-							<span class="consola-punto"></span>
-							<span class="consola-punto"></span>
-							<span class="consola-titulo">bash — eymer</span>
-						</div>
-						<div class="consola-cuerpo">
-							<p><span class="consola-prompt">$</span> whoami</p>
-							<p>eymer — ingeniería de sistemas</p>
-							<p>
-								<span class="consola-prompt">$</span> status<span
-									class="cursor"
-								></span>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+        <!-- HERO / PRESENTACIÓN -->
+        <section id="hero-eymer" class="hero-seccion">
+            <p class="etiqueta-superior"><span class="punto" aria-hidden="true"></span>status: online</p>
+            <h1>Eymer López</h1>
+            <p class="rol">Desarrollador Full Stack · IA & Arquitectura de Software</p>
+        </section>
 
-			<!-- SOBRE MÍ EYMER -->
-			<section class="sobre-mi" id="sobre-eymer">
-				<div class="contenedor about-grid">
-					<section class="persona" aria-labelledby="titulo-eymer">
-						<img
-							class="about-avatar"
-							src="images/avatar.png"
-							alt="Ilustración del avatar de Eymer"
-							loading="lazy"
-						/>
-						<div class="about-texto">
-							<h2 id="titulo-eymer">Sobre mí — Eymer</h2>
-							<p>
-								Me interesa el punto de encuentro entre la inteligencia
-								artificial y la ciberseguridad: cómo se pueden usar modelos de
-								lenguaje para automatizar tareas y, al mismo tiempo, cómo se
-								protegen esos mismos sistemas. JavaScript es el lenguaje con el
-								que me siento más cómodo.
-							</p>
-							<div class="skills-lista">
-								<span class="skill-chip">JavaScript</span>
-								<span class="skill-chip">n8n</span>
-								<span class="skill-chip">Linux / CLI</span>
-								<span class="skill-chip">OWASP</span>
-							</div>
-						</div>
-					</section>
-				</div>
-			</section>
+        <!-- SOBRE MÍ -->
+        <section class="perfil" aria-label="Sobre mí">
+            <div class="foto">
+                <img src="images/avatar-eymer.png" alt="Foto de perfil de Eymer López">
+            </div>
+            <div class="descripcion">
+                <p>Estudiante de Ingeniería de Sistemas en Unicomfacauca (Popayán). Me apasiona construir asistentes inteligentes, orquestar automatizaciones con n8n y diseñar arquitecturas de software robustas y funcionales.</p>
+            </div>
+        </section>
 
-			<!-- PROYECTOS EYMER -->
-			<section class="proyectos" id="proyectos-eymer">
-				<div class="contenedor">
-					<h2>Mis Proyectos</h2>
-					<div class="proyectos-lista">
-						<article class="log-entry">
-							<span class="log-estado"></span>
-							<div class="log-contenido">
-								<div class="log-titulo">
-									<h3>DRAAKOS</h3>
-									<span class="log-fecha">asistente personal</span>
-								</div>
-								<p>
-									Asistente de IA personal integrado con Telegram, Gmail, Google
-									Calendar, Google Tasks y Brave Search, orquestado en n8n.
-								</p>
-								<div class="log-tags">
-									<span class="tag">n8n</span>
-									<span class="tag">Composio</span>
-									<span class="tag">Groq</span>
-									<span class="tag">Telegram API</span>
-								</div>
-							</div>
-						</article>
+        <!-- PROYECTOS Y HABILIDADES (MÍNIMO 4 TARJETAS) -->
+        <section class="proyectos" aria-label="Proyectos">
+            <div class="encabezado-seccion">
+                <h2>Proyectos Destacados</h2>
+            </div>
+            <div class="cuadricula-proyectos">
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_01</span>
+                    <div class="miniatura"><img src="img/proyecto1.png" alt="DRAAKOS AI" loading="lazy"></div>
+                    <h3>DRAAKOS AI</h3>
+                    <p>Asistente personal en Telegram integrado con n8n, Composio y Groq.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_02</span>
+                    <div class="miniatura"><img src="img/proyecto2.png" alt="JobRadar AI" loading="lazy"></div>
+                    <h3>JobRadar AI</h3>
+                    <p>Plataforma de búsqueda de empleo y análisis de brechas de habilidades.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_03</span>
+                    <div class="miniatura"><img src="img/proyecto3.png" alt="Bot Citas Médicas" loading="lazy"></div>
+                    <h3>Bot Citas Médicas</h3>
+                    <p>Sistema de agendamiento clínico usando Supabase REST y n8n.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_04</span>
+                    <div class="miniatura"><img src="img/proyecto4.png" alt="CodeSentry Offline" loading="lazy"></div>
+                    <h3>CodeSentry Offline</h3>
+                    <p>Plataforma de análisis de calidad de código local con Ollama.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+            </div>
+        </section>
 
-						<article class="log-entry">
-							<span class="log-estado en-progreso"></span>
-							<div class="log-contenido">
-								<div class="log-titulo">
-									<h3>JobRadar AI</h3>
-									<span class="log-fecha">arquitectura de software</span>
-								</div>
-								<p>
-									Plataforma de búsqueda de empleo sobre WordPress que integra
-									la API de Adzuna, análisis local de brechas de habilidades y
-									alertas por Telegram.
-								</p>
-								<div class="log-tags">
-									<span class="tag">WordPress</span>
-									<span class="tag">Adzuna API</span>
-									<span class="tag">C4 Model</span>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</section>
+        <!-- CONTACTO -->
+        <section class="seccion-contacto" aria-label="Contacto Eymer">
+            <h2>Contacto Directo</h2>
+            <form class="formulario-contacto" action="#" method="post">
+                <div class="campo">
+                    <label for="nombre-eymer">Nombre completo</label>
+                    <input type="text" id="nombre-eymer" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="correo-eymer">Correo electrónico</label>
+                    <input type="email" id="correo-eymer" name="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje-eymer">Mensaje</label>
+                    <textarea id="mensaje-eymer" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
 
-			<!-- CONTACTO EYMER -->
-			<section class="contacto" id="contacto-eymer">
-				<div class="contenedor contacto-grid">
-					<div class="contacto-info">
-						<h2>Contacto con Eymer</h2>
-						<p style="margin-bottom: 1.5rem">
-							¿Tienes un proyecto en mente o quieres hablar de IA y
-							automatización? Escríbeme.
-						</p>
-						<div class="info-item">
-							<svg
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M4 4h16v16H4z" />
-								<path d="m4 6 8 7 8-7" />
-							</svg>
-							<span>eymer.dev@correo.com</span>
-						</div>
-						<div class="info-item">
-							<svg
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="m9 18 6-6-6-6" />
-							</svg>
-							<span>github.com/eymer</span>
-						</div>
-					</div>
+    </main>
 
-					<form class="contacto-form" action="#" method="post">
-						<div class="campo">
-							<label for="nombre-eymer">Nombre</label>
-							<input
-								type="text"
-								id="nombre-eymer"
-								name="nombre"
-								placeholder="Tu nombre"
-								required
-							/>
-						</div>
-						<div class="campo">
-							<label for="correo-eymer">Correo</label>
-							<input
-								type="email"
-								id="correo-eymer"
-								name="correo"
-								placeholder="tucorreo@ejemplo.com"
-								required
-							/>
-						</div>
-						<div class="campo">
-							<label for="mensaje-eymer">Mensaje</label>
-							<textarea
-								id="mensaje-eymer"
-								name="mensaje"
-								placeholder="Cuéntame en qué estás trabajando..."
-								required
-							></textarea>
-						</div>
-						<button type="submit" class="btn">Enviar mensaje a Eymer</button>
-					</form>
-				</div>
-			</section>
-		</main>
+    <!-- ============================================== -->
+    <!-- PORTAFOLIO 2: YINED PAOLA                     -->
+    <!-- ============================================== -->
+    <main id="portafolio-yined" class="tarjeta-portafolio" hidden>
 
-		<!-- ================================================================= -->
-		<!-- PORTAFOLIO 2: YINED PAOLA (hidden por defecto hasta usar JS) -->
-		<!-- ================================================================= -->
-		<main id="portafolio-yined" class="vista-portafolio" hidden>
-			<!-- HERO YINED -->
-			<section class="hero" id="inicio-yined">
-				<div class="contenedor hero-grid">
-					<p class="hero-etiqueta">
-						systems engineering · cybersecurity · malware analysis
-					</p>
-					<h1>
-						Yined Paola, especialista en ciberseguridad y detección de amenazas.
-					</h1>
-					<p class="hero-descripcion">
-						Estudiante de Ingeniería de Sistemas en Unicomfacauca (Popayán,
-						Colombia). Investigo patrones de malware, análisis de firmas e
-						inteligencia de amenazas aplicando algoritmos de Machine Learning.
-					</p>
+        <!-- HERO / PRESENTACIÓN -->
+        <section id="hero-yined" class="hero-seccion">
+            <p class="etiqueta-superior"><span class="punto" aria-hidden="true"></span>status: online</p>
+            <h1>Yined Paola</h1>
+            <p class="rol">Especialista en Ciberseguridad · Malware Analysis & ML</p>
+        </section>
 
-					<div id="consola-hero-yined" class="consola-box">
-						<div class="consola-barra">
-							<span class="consola-punto"></span>
-							<span class="consola-punto"></span>
-							<span class="consola-punto"></span>
-							<span class="consola-titulo">bash — yined</span>
-						</div>
-						<div class="consola-cuerpo">
-							<p><span class="consola-prompt">$</span> whoami</p>
-							<p>yined — ciberseguridad &amp; malware analysis</p>
-							<p>
-								<span class="consola-prompt">$</span> status<span
-									class="cursor"
-								></span>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+        <!-- SOBRE MÍ -->
+        <section class="perfil" aria-label="Sobre mí">
+            <div class="foto">
+                <img src="images/avatar-yined.png" alt="Foto de perfil de Yined Paola">
+            </div>
+            <div class="descripcion">
+                <p>Estudiante de Ingeniería de Sistemas en Unicomfacauca. Mi investigación se enfoca en el análisis de malware, la auditoría de seguridad en código y la aplicación de Machine Learning para detectar amenazas avanzadas.</p>
+            </div>
+        </section>
 
-			<!-- SOBRE MÍ YINED -->
-			<section class="sobre-mi" id="sobre-yined">
-				<div class="contenedor about-grid">
-					<section class="persona" aria-labelledby="titulo-yined">
-						<img
-							class="about-avatar"
-							src="images/avatar-yined.png"
-							alt="Ilustración del avatar de Yined Paola"
-							loading="lazy"
-						/>
-						<div class="about-texto">
-							<h2 id="titulo-yined">Sobre mí — Yined Paola</h2>
-							<p>
-								Mi enfoque está en la ciberseguridad aplicada, en especial en la
-								detección y análisis de malware. Investigo cómo los modelos
-								basados en aprendizaje automático se comparan frente a los
-								métodos tradicionales de firmas para identificar código
-								malicioso.
-							</p>
-							<div class="skills-lista">
-								<span class="skill-chip">Ciberseguridad</span>
-								<span class="skill-chip">Análisis de malware</span>
-								<span class="skill-chip">Machine Learning</span>
-								<span class="skill-chip">Threat Intelligence</span>
-							</div>
-						</div>
-					</section>
-				</div>
-			</section>
+        <!-- PROYECTOS Y HABILIDADES (MÍNIMO 4 TARJETAS) -->
+        <section class="proyectos" aria-label="Proyectos">
+            <div class="encabezado-seccion">
+                <h2>Proyectos Destacados</h2>
+            </div>
+            <div class="cuadricula-proyectos">
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_01</span>
+                    <div class="miniatura"><img src="img/proyecto-codesentry.png" alt="CodeSentry Audit" loading="lazy"></div>
+                    <h3>CodeSentry Audit</h3>
+                    <p>Auditoría de código estático usando IA local para detectar fallas OWASP.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_02</span>
+                    <div class="miniatura"><img src="img/proyecto-malware.png" alt="Malware Classifier" loading="lazy"></div>
+                    <h3>Malware Classifier</h3>
+                    <p>Modelo de clasificación de amenazas PE mediante Scikit-Learn.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_03</span>
+                    <div class="miniatura"><img src="img/proyecto-threat.png" alt="Threat Radar" loading="lazy"></div>
+                    <h3>Threat Radar</h3>
+                    <p>Sistema de monitoreo de vectores de ataque e inteligencia de amenazas.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <span class="id-proyecto">PROY_04</span>
+                    <div class="miniatura"><img src="img/proyecto-network.png" alt="Network Sentinel" loading="lazy"></div>
+                    <h3>Network Sentinel</h3>
+                    <p>Herramienta CLI para escaneo local y detección de anomalías en red.</p>
+                    <a href="#" class="enlace-proyecto">Ver detalles →</a>
+                </article>
+            </div>
+        </section>
 
-			<!-- PROYECTOS YINED -->
-			<section class="proyectos" id="proyectos-yined">
-				<div class="contenedor">
-					<h2>Mis Proyectos</h2>
-					<div class="proyectos-lista">
-						<article class="log-entry">
-							<span class="log-estado en-progreso"></span>
-							<div class="log-contenido">
-								<div class="log-titulo">
-									<h3>CodeSentry</h3>
-									<span class="log-fecha">en revisión</span>
-								</div>
-								<p>
-									Plataforma de análisis de calidad de código y revisión
-									asistida por IA local y offline usando Ollama para auditoría
-									de seguridad.
-								</p>
-								<div class="log-tags">
-									<span class="tag">Ollama</span>
-									<span class="tag">Auditoría Code</span>
-									<span class="tag">Security</span>
-								</div>
-							</div>
-						</article>
+        <!-- CONTACTO -->
+        <section class="seccion-contacto" aria-label="Contacto Yined">
+            <h2>Contacto Directo</h2>
+            <form class="formulario-contacto" action="#" method="post">
+                <div class="campo">
+                    <label for="nombre-yined">Nombre completo</label>
+                    <input type="text" id="nombre-yined" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="correo-yined">Correo electrónico</label>
+                    <input type="email" id="correo-yined" name="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje-yined">Mensaje</label>
+                    <textarea id="mensaje-yined" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
 
-						<article class="log-entry">
-							<span class="log-estado"></span>
-							<div class="log-contenido">
-								<div class="log-titulo">
-									<h3>Malware Analysis Framework</h3>
-									<span class="log-fecha">investigación</span>
-								</div>
-								<p>
-									Estudio comparativo entre detección basada en firmas
-									heurísticas vs. modelos de clasificación con Machine Learning.
-								</p>
-								<div class="log-tags">
-									<span class="tag">Python</span>
-									<span class="tag">Scikit-Learn</span>
-									<span class="tag">PE Header Analysis</span>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</section>
+    </main>
 
-			<!-- CONTACTO YINED -->
-			<section class="contacto" id="contacto-yined">
-				<div class="contenedor contacto-grid">
-					<div class="contacto-info">
-						<h2>Contacto con Yined Paola</h2>
-						<p style="margin-bottom: 1.5rem">
-							¿Interesado en ciberseguridad o análisis de vulnerabilidades?
-							Escríbeme.
-						</p>
-						<div class="info-item">
-							<svg
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M4 4h16v16H4z" />
-								<path d="m4 6 8 7 8-7" />
-							</svg>
-							<span>yined.paola@correo.com</span>
-						</div>
-						<div class="info-item">
-							<svg
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="m9 18 6-6-6-6" />
-							</svg>
-							<span>github.com/yinedpaola</span>
-						</div>
-					</div>
+    <!-- FOOTER GLOBAL -->
+    <footer id="pie-pagina">
+        <p>© 2026 Eymer López &amp; Yined Paola — Unicomfacauca (Popayán, Colombia).</p>
+    </footer>
 
-					<form class="contacto-form" action="#" method="post">
-						<div class="campo">
-							<label for="nombre-yined">Nombre</label>
-							<input
-								type="text"
-								id="nombre-yined"
-								name="nombre"
-								placeholder="Tu nombre"
-								required
-							/>
-						</div>
-						<div class="campo">
-							<label for="correo-yined">Correo</label>
-							<input
-								type="email"
-								id="correo-yined"
-								name="correo"
-								placeholder="tucorreo@ejemplo.com"
-								required
-							/>
-						</div>
-						<div class="campo">
-							<label for="mensaje-yined">Mensaje</label>
-							<textarea
-								id="mensaje-yined"
-								name="mensaje"
-								placeholder="Cuéntame sobre tu proyecto..."
-								required
-							></textarea>
-						</div>
-						<button type="submit" class="btn">Enviar mensaje a Yined</button>
-					</form>
-				</div>
-			</section>
-		</main>
+    <!-- INTERACTIVIDAD JS -->
+    <script src="js/script.js"></script>
 
-		<!-- PIE DE PÁGINA GLOBAL -->
-		<footer class="pie">
-			<p>
-				© 2026 Eymer &amp; Yined Paola — Portafolio realizado para el curso de
-				Desarrollo Web.
-			</p>
-		</footer>
-        <script src="script.js"></script>
-	</body>
+</body>
 </html>

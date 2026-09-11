@@ -1,0 +1,430 @@
+/* ============================================================
+    1. VARIABLES DE :root (MÍNIMO 4 VARIABLES DE COLOR Y TIPOGRAFÍA)
+============================================================ */
+:root {
+    /* FUENTES */
+    --fuente-titulo: "Bebas Neue", sans-serif;
+    --fuente-mono: "JetBrains Mono", monospace;
+    --fuente-texto: "Poppins", sans-serif;
+
+    /* TEMA EYMER (Dorado, Madera y Negro) */
+    --eymer-bg: #0d0d0d;
+    --eymer-panel: #181818;
+    --eymer-texto: #f4f4f4;
+    --eymer-secundario: #a0a0a0;
+    --eymer-acento: #d4af37;
+    --eymer-hover: #b89528;
+    --eymer-borde: rgba(212, 175, 55, 0.3);
+
+    /* TEMA YINED (Morado, Crema y Rosa Pastel) */
+    --yined-bg: #1a1528;
+    --yined-panel: #251d38;
+    --yined-texto: #fff8f0;
+    --yined-secundario: #c3b5d3;
+    --yined-acento: #d880b7;
+    --yined-hover: #be619d;
+    --yined-borde: rgba(216, 128, 183, 0.3);
+}
+
+/* ============================================================
+    2. RESET BÁSICO CON box-sizing: border-box
+============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    background-color: var(--eymer-bg);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 15px;
+    transition: background-color 0.3s ease;
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ============================================================
+    3. HEADER Y NAV CON FLEXBOX (GRUPO FLEXBOX 1)
+============================================================ */
+#encabezado-principal {
+    width: 100%;
+    max-width: 640px;
+}
+
+.selector-portafolios {
+    display: flex;
+    gap: 10px;
+    background-color: #111111;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.btn-tab {
+    flex: 1;
+    background: transparent;
+    color: #888888;
+    border: none;
+    padding: 10px 14px;
+    font-family: var(--fuente-mono);
+    font-size: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* HOVER Y TRANSICIÓN */
+}
+
+.btn-tab:hover {
+    color: #ffffff;
+}
+
+#tab-eymer.activo {
+    background-color: var(--eymer-acento);
+    color: #0d0d0d;
+    font-weight: bold;
+}
+
+#tab-yined.activo {
+    background-color: var(--yined-acento);
+    color: #1a1528;
+    font-weight: bold;
+}
+
+/* ============================================================
+    4. ESTRUCTURA DE TARJETAS DE PORTAFOLIO
+============================================================ */
+.tarjeta-portafolio {
+    width: 100%;
+    max-width: 640px;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.tarjeta-portafolio[hidden] {
+    display: none !important;
+}
+
+/* ============================================================
+    5. TEMAS ESPECÍFICOS (EYMER vs YINED)
+============================================================ */
+#portafolio-eymer {
+    background-color: var(--eymer-bg);
+    color: var(--eymer-texto);
+    border: 1px solid var(--eymer-acento);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+#portafolio-eymer .punto,
+#portafolio-eymer .rol,
+#portafolio-eymer .id-proyecto,
+#portafolio-eymer .enlace-proyecto,
+#portafolio-eymer h2 {
+    color: var(--eymer-acento);
+}
+
+#portafolio-eymer .tarjeta-proyecto {
+    background-color: var(--eymer-panel);
+    border: 1px solid var(--eymer-borde);
+}
+
+#portafolio-eymer .tarjeta-proyecto:hover {
+    border-color: var(--eymer-acento);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+#portafolio-eymer .btn-enviar {
+    background-color: var(--eymer-acento);
+    color: #0d0d0d;
+}
+
+#portafolio-eymer .btn-enviar:hover {
+    background-color: var(--eymer-hover);
+}
+
+#portafolio-yined {
+    background-color: var(--yined-bg);
+    color: var(--yined-texto);
+    border: 1px solid var(--yined-acento);
+    box-shadow: 0 0 15px rgba(216, 128, 183, 0.2);
+}
+
+#portafolio-yined .punto,
+#portafolio-yined .rol,
+#portafolio-yined .id-proyecto,
+#portafolio-yined .enlace-proyecto,
+#portafolio-yined h2 {
+    color: var(--yined-acento);
+}
+
+#portafolio-yined .tarjeta-proyecto {
+    background-color: var(--yined-panel);
+    border: 1px solid var(--yined-borde);
+}
+
+#portafolio-yined .tarjeta-proyecto:hover {
+    border-color: var(--yined-acento);
+    box-shadow: 0 0 10px rgba(216, 128, 183, 0.3);
+}
+
+#portafolio-yined .btn-enviar {
+    background-color: var(--yined-acento);
+    color: #1a1528;
+}
+
+#portafolio-yined .btn-enviar:hover {
+    background-color: var(--yined-hover);
+}
+
+/* ============================================================
+    6. SECCIÓN PERFIL Y PROYECTOS (GRUPO FLEXBOX 2 Y GRID)
+============================================================ */
+.hero-seccion {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+
+.etiqueta-superior {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.punto {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    margin-right: 6px;
+}
+
+h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 44px;
+}
+
+.rol {
+    font-family: var(--fuente-mono);
+    font-size: 13px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto img {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    object-fit: cover;
+}
+
+.descripcion p {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.proyectos h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.cuadricula-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.tarjeta-proyecto {
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-2px);
+}
+
+.id-proyecto {
+    font-family: var(--fuente-mono);
+    font-size: 10px;
+}
+
+.miniatura {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.miniatura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-proyecto h3 {
+    font-size: 14px;
+}
+
+.tarjeta-proyecto p {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+.enlace-proyecto {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    margin-top: auto;
+}
+
+.enlace-proyecto:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+    7. FORMULARIO DE CONTACTO
+============================================================ */
+.seccion-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label {
+    font-family: var(--fuente-mono);
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.campo input,
+.campo textarea {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: inherit;
+    font-family: var(--fuente-texto);
+    font-size: 12px;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.btn-enviar {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#pie-pagina {
+    font-family: var(--fuente-mono);
+    font-size: 11px;
+    opacity: 0.6;
+    text-align: center;
+    padding-block: 10px;
+}
+
+/* ============================================================
+    8. MEDIA QUERIES FUNCIONALES (MÍNIMO 3 MEDIA QUERIES)
+============================================================ */
+
+/* MEDIA QUERY 1: PANTALLAS PEQUEÑAS (MÓVILES <= 600px) */
+@media (max-width: 600px) {
+    .cuadricula-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* MEDIA QUERY 2: PANTALLAS MEDIANAS (TABLETS / MÓVILES ANCHOS <= 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .tarjeta-portafolio {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+}
+
+/* MEDIA QUERY 3: ORIENTACIÓN LANDSCAPE Y MONITOR PEQUEÑO (<= 768px) */
+@media (max-width: 768px) {
+    .selector-portafolios {
+        flex-direction: row;
+    }
+
+    .btn-tab {
+        font-size: 11px;
+    }
+}
