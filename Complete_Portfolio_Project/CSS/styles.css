@@ -16,14 +16,14 @@
     --eymer-hover: #b89528;
     --eymer-borde: rgba(212, 175, 55, 0.3);
 
-    /* TEMA YINED (Morado, Crema y Rosa Pastel) */
-    --yined-bg: #1a1528;
-    --yined-panel: #251d38;
-    --yined-texto: #fff8f0;
-    --yined-secundario: #c3b5d3;
-    --yined-acento: #d880b7;
-    --yined-hover: #be619d;
-    --yined-borde: rgba(216, 128, 183, 0.3);
+    /* TEMA PAOLA (Morado, Crema y Rosa Pastel) */
+    --paola-bg: #1a1528;
+    --paola-panel: #251d38;
+    --paola-texto: #fff8f0;
+    --paola-secundario: #c3b5d3;
+    --paola-acento: #d880b7;
+    --paola-hover: #be619d;
+    --paola-borde: rgba(216, 128, 183, 0.3);
 }
 
 /* ============================================================
@@ -105,8 +105,8 @@ img {
     font-weight: bold;
 }
 
-#tab-yined.activo {
-    background-color: var(--yined-acento);
+#tab-paola.activo {
+    background-color: var(--paola-acento);
     color: #1a1528;
     font-weight: bold;
 }
@@ -130,7 +130,7 @@ img {
 }
 
 /* ============================================================
-    5. TEMAS ESPECÍFICOS (EYMER vs YINED)
+    5. TEMAS ESPECÍFICOS (EYMER vs PAOLA)
 ============================================================ */
 #portafolio-eymer {
     background-color: var(--eymer-bg);
@@ -166,38 +166,38 @@ img {
     background-color: var(--eymer-hover);
 }
 
-#portafolio-yined {
-    background-color: var(--yined-bg);
-    color: var(--yined-texto);
-    border: 1px solid var(--yined-acento);
+#portafolio-paola {
+    background-color: var(--paola-bg);
+    color: var(--paola-texto);
+    border: 1px solid var(--paola-acento);
     box-shadow: 0 0 15px rgba(216, 128, 183, 0.2);
 }
 
-#portafolio-yined .punto,
-#portafolio-yined .rol,
-#portafolio-yined .id-proyecto,
-#portafolio-yined .enlace-proyecto,
-#portafolio-yined h2 {
-    color: var(--yined-acento);
+#portafolio-paola .punto,
+#portafolio-paola .rol,
+#portafolio-paola .id-proyecto,
+#portafolio-paola .enlace-proyecto,
+#portafolio-paola h2 {
+    color: var(--paola-acento);
 }
 
-#portafolio-yined .tarjeta-proyecto {
-    background-color: var(--yined-panel);
-    border: 1px solid var(--yined-borde);
+#portafolio-paola .tarjeta-proyecto {
+    background-color: var(--paola-panel);
+    border: 1px solid var(--paola-borde);
 }
 
-#portafolio-yined .tarjeta-proyecto:hover {
-    border-color: var(--yined-acento);
+#portafolio-paola .tarjeta-proyecto:hover {
+    border-color: var(--paola-acento);
     box-shadow: 0 0 10px rgba(216, 128, 183, 0.3);
 }
 
-#portafolio-yined .btn-enviar {
-    background-color: var(--yined-acento);
+#portafolio-paola .btn-enviar {
+    background-color: var(--paola-acento);
     color: #1a1528;
 }
 
-#portafolio-yined .btn-enviar:hover {
-    background-color: var(--yined-hover);
+#portafolio-paola .btn-enviar:hover {
+    background-color: var(--paola-hover);
 }
 
 /* ============================================================

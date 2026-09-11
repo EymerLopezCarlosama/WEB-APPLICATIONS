@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const btnEymer = document.getElementById('tab-eymer');
-    const btnYined = document.getElementById('tab-yined');
+    const btnPaola = document.getElementById('tab-paola');
     const portafolioEymer = document.getElementById('portafolio-eymer');
-    const portafolioYined = document.getElementById('portafolio-yined');
+    const portafolioPaola = document.getElementById('portafolio-paola');
 
     // Transición hacia el Portafolio de Eymer
     btnEymer.addEventListener('click', () => {
         portafolioEymer.removeAttribute('hidden');
-        portafolioYined.setAttribute('hidden', '');
+        portafolioPaola.setAttribute('hidden', '');
         
         btnEymer.classList.add('activo');
-        btnYined.classList.remove('activo');
+        btnPaola.classList.remove('activo');
         
         document.body.style.backgroundColor = 'var(--eymer-bg)';
     });
 
-    // Transición hacia el Portafolio de Yined Paola
-    btnYined.addEventListener('click', () => {
-        portafolioYined.removeAttribute('hidden');
+    // Transición hacia el Portafolio de Paola Petevi
+    btnPaola.addEventListener('click', () => {
+        portafolioPaola.removeAttribute('hidden');
         portafolioEymer.setAttribute('hidden', '');
         
-        btnYined.classList.add('activo');
+        btnPaola.classList.add('activo');
         btnEymer.classList.remove('activo');
         
-        document.body.style.backgroundColor = 'var(--yined-bg)';
+        document.body.style.backgroundColor = 'var(--paola-bg)';
     });
 });

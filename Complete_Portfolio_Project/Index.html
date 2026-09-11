@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional — Eymer & Yined Paola</title>
-    <meta name="description" content="Portafolio profesional de Eymer López y Yined Paola, estudiantes de Ingeniería de Sistemas enfocados en desarrollo, IA y ciberseguridad.">
+    <title>Portafolio Profesional — Eymer &amp; Paola Petevi</title>
+    <meta name="description" content="Portafolio profesional de Eymer López y Paola Petevi, estudiantes de Ingeniería de Sistemas enfocados en desarrollo, IA y ciberseguridad.">
     
     <!-- FUENTES EXTERNAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,12 +23,12 @@
     <header id="encabezado-principal">
         <nav class="selector-portafolios" aria-label="Navegación entre integrantes">
             <button type="button" class="btn-tab activo" id="tab-eymer">Portafolio: Eymer López</button>
-            <button type="button" class="btn-tab" id="tab-yined">Portafolio: Yined Paola</button>
+            <button type="button" class="btn-tab" id="tab-paola">Portafolio: Paola Petevi</button>
         </nav>
     </header>
 
     <!-- ============================================== -->
-    <!-- PORTAFOLIO 1: EYMER LÓPEZ                     -->
+    <!-- PORTAFOLIO 1: EYMER LÓPEZ (main activo por defecto) -->
     <!-- ============================================== -->
     <main id="portafolio-eymer" class="tarjeta-portafolio">
 
@@ -109,21 +109,27 @@
     </main>
 
     <!-- ============================================== -->
-    <!-- PORTAFOLIO 2: YINED PAOLA                     -->
+    <!-- PORTAFOLIO 2: PAOLA PETEVI                                       -->
+    <!-- CORREGIDO: <main> -> <section> (solo debe existir un <main>      -->
+    <!-- por vista; este bloque ya se ocultaba con [hidden], pero como    -->
+    <!-- <section> evita cualquier advertencia de accesibilidad en        -->
+    <!-- validadores/lectores de pantalla que auditen el DOM completo).   -->
+    <!-- No requiere cambios en CSS ni en JS: ambos seleccionan por       -->
+    <!-- id/clase, nunca por la etiqueta <main>.                          -->
     <!-- ============================================== -->
-    <main id="portafolio-yined" class="tarjeta-portafolio" hidden>
+    <section id="portafolio-paola" class="tarjeta-portafolio" hidden>
 
         <!-- HERO / PRESENTACIÓN -->
-        <section id="hero-yined" class="hero-seccion">
+        <section id="hero-paola" class="hero-seccion">
             <p class="etiqueta-superior"><span class="punto" aria-hidden="true"></span>status: online</p>
-            <h1>Yined Paola</h1>
+            <h1>Paola Petevi</h1>
             <p class="rol">Especialista en Ciberseguridad · Malware Analysis & ML</p>
         </section>
 
         <!-- SOBRE MÍ -->
         <section class="perfil" aria-label="Sobre mí">
             <div class="foto">
-                <img src="images/avatar-yined.png" alt="Foto de perfil de Yined Paola">
+                <img src="images/avatar-paola.png" alt="Foto de perfil de Paola Petevi">
             </div>
             <div class="descripcion">
                 <p>Estudiante de Ingeniería de Sistemas en Unicomfacauca. Mi investigación se enfoca en el análisis de malware, la auditoría de seguridad en código y la aplicación de Machine Learning para detectar amenazas avanzadas.</p>
@@ -168,30 +174,30 @@
         </section>
 
         <!-- CONTACTO -->
-        <section class="seccion-contacto" aria-label="Contacto Yined">
+        <section class="seccion-contacto" aria-label="Contacto Paola Petevi">
             <h2>Contacto Directo</h2>
             <form class="formulario-contacto" action="#" method="post">
                 <div class="campo">
-                    <label for="nombre-yined">Nombre completo</label>
-                    <input type="text" id="nombre-yined" name="nombre" placeholder="Tu nombre" required>
+                    <label for="nombre-paola">Nombre completo</label>
+                    <input type="text" id="nombre-paola" name="nombre" placeholder="Tu nombre" required>
                 </div>
                 <div class="campo">
-                    <label for="correo-yined">Correo electrónico</label>
-                    <input type="email" id="correo-yined" name="correo" placeholder="correo@ejemplo.com" required>
+                    <label for="correo-paola">Correo electrónico</label>
+                    <input type="email" id="correo-paola" name="correo" placeholder="correo@ejemplo.com" required>
                 </div>
                 <div class="campo">
-                    <label for="mensaje-yined">Mensaje</label>
-                    <textarea id="mensaje-yined" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                    <label for="mensaje-paola">Mensaje</label>
+                    <textarea id="mensaje-paola" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
                 </div>
                 <button type="submit" class="btn-enviar">Enviar Mensaje</button>
             </form>
         </section>
 
-    </main>
+    </section>
 
     <!-- FOOTER GLOBAL -->
     <footer id="pie-pagina">
-        <p>© 2026 Eymer López &amp; Yined Paola — Unicomfacauca (Popayán, Colombia).</p>
+        <p>© 2026 Eymer López &amp; Paola Petevi — Unicomfacauca (Popayán, Colombia).</p>
     </footer>
 
     <!-- INTERACTIVIDAD JS -->
