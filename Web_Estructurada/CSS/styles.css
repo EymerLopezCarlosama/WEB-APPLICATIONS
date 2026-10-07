@@ -301,6 +301,7 @@ section,
     font-family: var(--fuente-lectura);
     font-size: 15px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
 }
 
 .campo input:focus, 
